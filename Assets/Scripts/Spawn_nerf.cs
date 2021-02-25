@@ -5,9 +5,11 @@ using UnityEngine;
 public class Spawn_nerf : MonoBehaviour
 {
     private bool move = true;
+    
     // Start is called before the first frame update
     void Start()
     {
+
         
     }
 
@@ -16,7 +18,7 @@ public class Spawn_nerf : MonoBehaviour
     {
         if (move == true)
         {
-            gameObject.GetComponent<Rigidbody>().velocity = transform.forward * 10.0f;
+            gameObject.GetComponent<Rigidbody>().velocity = transform.forward * 2.0f;
         }
     }
     public void OnTriggerEnter(Collider other)
