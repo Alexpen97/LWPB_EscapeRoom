@@ -170,7 +170,7 @@ namespace VRKeys {
 			disabled = false;
 
 			if (canvas != null) {
-				canvas.SetActive (true);
+				//canvas.SetActive (true);
 			}
 
 			if (keysParent != null) {
@@ -195,7 +195,7 @@ namespace VRKeys {
 			disabled = true;
 
 			if (canvas != null) {
-				canvas.SetActive (false);
+				//canvas.SetActive (false);
 			}
 
 			if (keysParent != null) {
@@ -432,7 +432,7 @@ namespace VRKeys {
 			bool activeState = canvas.activeSelf;
 
 			// Hide everything before setting up the keys
-			canvas.SetActive (false);
+			//canvas.SetActive (false);
 			keysParent.gameObject.SetActive (false);
 
 			// Remove previous keys
@@ -531,7 +531,7 @@ namespace VRKeys {
 			}
 
 			// Reset visibility of canvas and keyboard
-			canvas.SetActive (activeState);
+			//canvas.SetActive (activeState);
 			keysParent.gameObject.SetActive (activeState);
 		}
 

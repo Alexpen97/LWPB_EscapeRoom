@@ -29,6 +29,10 @@ public class RoomManager : MonoBehaviourPunCallbacks
         CreateAndJoinRoom();
     }
 }
+    public override void OnPlayerEnteredRoom(Player newPlayer)
+    {
+        Debug.Log(newPlayer.NickName+"entered the game");
+    }
     private void CreateAndJoinRoom()
     {
         Debug.Log("create room");
@@ -38,5 +42,9 @@ public class RoomManager : MonoBehaviourPunCallbacks
         
         PhotonNetwork.CreateRoom("escaperoom", roomOptions);
         
+    }
+    public override void OnJoinedRoom()
+    {
+        PhotonNetwork.LoadLevel("HomeScene");
     }
 }

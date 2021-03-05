@@ -2,23 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIManager : MonoBehaviour
+public class RotationScript : MonoBehaviour
 {
-    public GameObject UI_VRMenuGameObject;
+    private bool rotate;
     // Start is called before the first frame update
     void Start()
     {
-      //  UI_VRMenuGameObject.SetActive(false);
-    }
-
-    public void OnWorldButtonClicked()
-    {
-        Debug.Log("worlds is clicked");
+        rotate = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (rotate)
+        {
+            transform.Rotate(Vector3.up * Time.deltaTime);
+        }
     }
 }

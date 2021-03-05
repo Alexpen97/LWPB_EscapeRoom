@@ -247,7 +247,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 184691485}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!4 &184691489
 Transform:
   m_ObjectHideFlags: 0
@@ -375,7 +375,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2008699743}
+      objectReference: {fileID: 0}
     - target: {fileID: 4259889451999880535, guid: 51ae3979a9dce7841970c1840a854dc7,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -456,11 +456,16 @@ PrefabInstance:
       propertyPath: m_HorizontalAlignment
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 4259889453178614642, guid: 51ae3979a9dce7841970c1840a854dc7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4259889453322337187, guid: 51ae3979a9dce7841970c1840a854dc7,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 2008699743}
+      objectReference: {fileID: 2008699744}
     - target: {fileID: 4259889453322337187, guid: 51ae3979a9dce7841970c1840a854dc7,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -1438,6 +1443,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2008699742}
+  - component: {fileID: 2008699744}
   - component: {fileID: 2008699743}
   m_Layer: 0
   m_Name: Login manager
@@ -1469,10 +1475,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 2008699741}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ebfcc17951aa9c429ad2a569912c8fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2008699744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008699741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 382c63a89dbe6cb46be448eea447403f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Playername_InputField: {fileID: 2093065533}
+  Playername_InputField: {fileID: 0}
 --- !u!1001 &2014857281
 PrefabInstance:
   m_ObjectHideFlags: 0

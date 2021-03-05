@@ -26,6 +26,11 @@ public class LoginManager : MonoBehaviourPunCallbacks
             PhotonNetwork.NickName = Playername_InputField.text;
             PhotonNetwork.ConnectUsingSettings();
         }
+        else
+        {
+            PhotonNetwork.NickName = "devtest";
+            PhotonNetwork.ConnectUsingSettings();
+        }
      
     }
 
@@ -36,6 +41,6 @@ public class LoginManager : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         Debug.Log("connected to master server");
-        PhotonNetwork.LoadLevel("HomeScene");
+        gameObject.GetComponent<RoomManager>().JoinRandomRoom(); 
     }
 }

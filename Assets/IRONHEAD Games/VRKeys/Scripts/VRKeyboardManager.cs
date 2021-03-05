@@ -39,8 +39,9 @@ public class VRKeyboardManager : MonoBehaviour
 	public void EnableVRKeyboard()
 	{		
 		keyboard.Enable();
+        /*
 		keyboard.SetPlaceholderMessage("What should we call you?");
-
+        */
 		keyboard.OnUpdate.AddListener(HandleUpdate);
 		keyboard.OnSubmit.AddListener(HandleSubmit);
 		keyboard.OnCancel.AddListener(HandleCancel);
