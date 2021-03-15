@@ -8,13 +8,13 @@ public class SpawnManager : MonoBehaviour
     [SerializeField]
     public GameObject PlayerObject;
 
-    public Vector3 SpawnPos;
+    public List<GameObject> Spawnpos;
     // Start is called before the first frame update
     void Start()
     {
         if (PhotonNetwork.IsConnectedAndReady)
         {
-            PhotonNetwork.Instantiate(PlayerObject.name, SpawnPos,Quaternion.identity);
+            PhotonNetwork.Instantiate(PlayerObject.name, Spawnpos[CheckPlayerCount()].transform.position,Quaternion.identity);
         }
     }
 
@@ -22,5 +22,9 @@ public class SpawnManager : MonoBehaviour
     void Update()
     {
         
+    }
+    private int CheckPlayerCount()
+    {
+        return PhotonNetwork.CountOfPlayers;
     }
 }

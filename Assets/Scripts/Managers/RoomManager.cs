@@ -45,6 +45,6 @@ public class RoomManager : MonoBehaviourPunCallbacks
     }
     public override void OnJoinedRoom()
     {
-        PhotonNetwork.LoadLevel("HomeScene");
+        PhotonNetwork.LoadLevel("LWBP_Ship");
     }
 }
