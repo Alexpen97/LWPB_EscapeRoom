@@ -200,13 +200,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4832085365529718716}
-  m_LocalRotation: {x: -0, y: 0.70710695, z: -0, w: -0.7071067}
-  m_LocalPosition: {x: -1.644867, y: 2.396231, z: -0.5163803}
+  m_LocalRotation: {x: -0, y: -0.70710737, z: -0, w: 0.7071063}
+  m_LocalPosition: {x: -1.5937077, y: 2.3962307, z: -0.51599985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7423219841507302749}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 630, z: 0}
 --- !u!33 &8569910620027162595
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -280,7 +280,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6034192192711199148}
   m_LocalRotation: {x: -0, y: -0.70710737, z: -0, w: 0.7071063}
-  m_LocalPosition: {x: -1.6878662, y: 2.396231, z: -0.5163803}
+  m_LocalPosition: {x: -1.676, y: 2.396231, z: -0.516}
   m_LocalScale: {x: 0.8000001, y: 0.8, z: 0.8000001}
   m_Children: []
   m_Father: {fileID: 7423219841507302749}
@@ -343,7 +343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7423219841507302749}
   m_Layer: 0
-  m_Name: Room name sign Electricity
+  m_Name: Room name sign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
