@@ -18,7 +18,7 @@ public class SpawnManager : MonoBehaviour
         {
             foreach (Canvas canvas in canvas)
             {
-                canvas.worldCamera = PlayerCam;
+                //canvas.worldCamera = PlayerCam;
             }
             PhotonNetwork.Instantiate(PlayerObject.name, Spawnpos[CheckPlayerCount()].transform.position,Quaternion.identity);
         }
