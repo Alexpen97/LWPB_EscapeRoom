@@ -22,7 +22,7 @@ public class NetworkedGrabbing : MonoBehaviourPunCallbacks, IPunOwnershipCallbac
     // Update is called once per frame
     void Update()
     {
-        
+        if(gameObject.tag != "Lever") { 
         if (isheld)
         {
             Rigidbody.isKinematic = true;
@@ -33,7 +33,7 @@ public class NetworkedGrabbing : MonoBehaviourPunCallbacks, IPunOwnershipCallbac
             Rigidbody.isKinematic = false;
             gameObject.layer = 8;
         }
-        
+        }
     }
     private void TransferOwnership()
     {
