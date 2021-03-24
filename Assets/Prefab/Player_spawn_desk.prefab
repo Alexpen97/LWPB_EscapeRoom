@@ -573,6 +573,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cup
       objectReference: {fileID: 0}
+    - target: {fileID: 2838415279526665919, guid: 834c53c992011834998cfeafefaa1569,
+        type: 3}
+      propertyPath: m_AttachTransform
+      value: 
+      objectReference: {fileID: 7896200019945273497}
+    - target: {fileID: 2838415279526665919, guid: 834c53c992011834998cfeafefaa1569,
+        type: 3}
+      propertyPath: m_Colliders.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838415279526665919, guid: 834c53c992011834998cfeafefaa1569,
+        type: 3}
+      propertyPath: m_Colliders.Array.data[0]
+      value: 
+      objectReference: {fileID: 7896200020420593207}
+    - target: {fileID: 2838415279526665919, guid: 834c53c992011834998cfeafefaa1569,
+        type: 3}
+      propertyPath: m_InteractionLayerMask.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 9049475859451643864, guid: 834c53c992011834998cfeafefaa1569,
         type: 3}
       propertyPath: m_RootOrder
@@ -633,6 +653,18 @@ PrefabInstance:
 --- !u!4 &3992108898096439127 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9049475859451643864, guid: 834c53c992011834998cfeafefaa1569,
+    type: 3}
+  m_PrefabInstance: {fileID: 5400066355475011727}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &7896200020420593207 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 2838415279526665912, guid: 834c53c992011834998cfeafefaa1569,
+    type: 3}
+  m_PrefabInstance: {fileID: 5400066355475011727}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7896200019945273497 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2838415278531239958, guid: 834c53c992011834998cfeafefaa1569,
     type: 3}
   m_PrefabInstance: {fileID: 5400066355475011727}
   m_PrefabAsset: {fileID: 0}
