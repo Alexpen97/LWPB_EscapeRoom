@@ -1512,8 +1512,6 @@ GameObject:
   - component: {fileID: 8728033015278832606}
   - component: {fileID: 8728033015278832605}
   - component: {fileID: 8728033015278832604}
-  - component: {fileID: 8728033015278832607}
-  - component: {fileID: 8728033015278832600}
   m_Layer: 0
   m_Name: left hand controller
   m_TagString: Untagged
@@ -1633,60 +1631,6 @@ MonoBehaviour:
   m_PlayHapticsOnHoverExited: 0
   m_HapticHoverExitIntensity: 0
   m_HapticHoverExitDuration: 0
---- !u!114 &8728033015278832607
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8728033015278832594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86d36d41d99d1a247ae0a5a2d02b3196, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HeldObject: {fileID: 0}
---- !u!114 &8728033015278832600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8728033015278832594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87caddefe10e397449228ef1bc7553d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controllerNode: 4
-  OnPress:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8728033015847798083}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  OnRelease:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8728033015847798083}
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &8728033015380595251
 GameObject:
   m_ObjectHideFlags: 0
@@ -3028,9 +2972,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 089d38c2beff1f044b446797593d7269, type: 3}
---- !u!1 &5446091694330840050 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3653637840890810929, guid: 089d38c2beff1f044b446797593d7269,
+--- !u!4 &9065533098864505313 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 355517853944651810, guid: 089d38c2beff1f044b446797593d7269,
     type: 3}
   m_PrefabInstance: {fileID: 8728033015067005379}
   m_PrefabAsset: {fileID: 0}
@@ -3052,9 +2996,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8728033015067005379}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &9065533098864505313 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 355517853944651810, guid: 089d38c2beff1f044b446797593d7269,
+--- !u!1 &5446091694330840050 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3653637840890810929, guid: 089d38c2beff1f044b446797593d7269,
     type: 3}
   m_PrefabInstance: {fileID: 8728033015067005379}
   m_PrefabAsset: {fileID: 0}
