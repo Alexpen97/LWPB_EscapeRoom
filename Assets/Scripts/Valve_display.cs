@@ -17,7 +17,6 @@ public class Valve_display : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(valve.transform.rotation.eulerAngles.z);
         if(valve.transform.rotation.eulerAngles.z > 10 && valve.transform.rotation.eulerAngles.z < 180) {
             subtract(); 
         }
