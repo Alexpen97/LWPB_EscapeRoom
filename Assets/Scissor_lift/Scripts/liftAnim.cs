@@ -24,7 +24,7 @@ public class liftAnim : MonoBehaviour // liftAnim and C# file name must be the s
 	private int topped;
 	private int bottomed;
 	private float animFrame;
-	private int upDownDirection;
+	private int upDownDirection = 0;
 
 
 	void Start() // Sets up Starting conditions
@@ -34,7 +34,7 @@ public class liftAnim : MonoBehaviour // liftAnim and C# file name must be the s
 		goUp = 0;
 		topped = 0;
 		bottomed = 1;
-		upDownDirection = 0;
+		Pause();
 	}
 	
 	void Update() // Runs once every frame
@@ -148,18 +148,18 @@ public class liftAnim : MonoBehaviour // liftAnim and C# file name must be the s
 		}
 	}
 
-	public void buttonGoUp()
-    {
-		upDownDirection = 1;
+	public void buttonPress()
+	{
+		if (upDownDirection == 1)
+		{
+			upDownDirection = -1;
+			Down();
+		}
+		else
+		{
+			Up();
+			upDownDirection = 1;
+		}
     }
 
-	public void buttonGoDown()
-	{
-		upDownDirection = -1;
-	}
-
-	public void buttonRelease()
-	{
-		upDownDirection = 0;
-	}
 }
