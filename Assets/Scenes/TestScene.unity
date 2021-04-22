@@ -396,6 +396,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1527163491117069005, guid: 87189c75f15e29f4981c69ad47a5e2db,
         type: 3}
+      propertyPath: TargetValue
+      value: -0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1527163491117069005, guid: 87189c75f15e29f4981c69ad47a5e2db,
+        type: 3}
       propertyPath: onTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 763789799}
@@ -502,7 +507,7 @@ PrefabInstance:
     - target: {fileID: 2542467621683225700, guid: 87189c75f15e29f4981c69ad47a5e2db,
         type: 3}
       propertyPath: m_Damper
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2542467621683225700, guid: 87189c75f15e29f4981c69ad47a5e2db,
         type: 3}
@@ -567,7 +572,7 @@ PrefabInstance:
     - target: {fileID: 4969538412649678958, guid: 87189c75f15e29f4981c69ad47a5e2db,
         type: 3}
       propertyPath: TargetValue
-      value: -0.5
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4969538412649678958, guid: 87189c75f15e29f4981c69ad47a5e2db,
         type: 3}
@@ -587,7 +592,17 @@ PrefabInstance:
     - target: {fileID: 6158730664644699675, guid: 87189c75f15e29f4981c69ad47a5e2db,
         type: 3}
       propertyPath: m_Damper
-      value: 2
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6158730664644699675, guid: 87189c75f15e29f4981c69ad47a5e2db,
+        type: 3}
+      propertyPath: m_MaxDistance
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6158730664644699675, guid: 87189c75f15e29f4981c69ad47a5e2db,
+        type: 3}
+      propertyPath: m_MinDistance
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6158730664644699675, guid: 87189c75f15e29f4981c69ad47a5e2db,
         type: 3}
@@ -652,7 +667,7 @@ PrefabInstance:
     - target: {fileID: 7133999944772743346, guid: 87189c75f15e29f4981c69ad47a5e2db,
         type: 3}
       propertyPath: TargetValue
-      value: -0.5
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7133999944772743346, guid: 87189c75f15e29f4981c69ad47a5e2db,
         type: 3}
@@ -702,7 +717,7 @@ PrefabInstance:
     - target: {fileID: 8254644109080436423, guid: 87189c75f15e29f4981c69ad47a5e2db,
         type: 3}
       propertyPath: m_Damper
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8254644109080436423, guid: 87189c75f15e29f4981c69ad47a5e2db,
         type: 3}
