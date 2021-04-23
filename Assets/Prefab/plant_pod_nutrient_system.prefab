@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2331639611596983021}
+  - component: {fileID: 3597111058436313980}
   m_Layer: 0
   m_Name: plant_pod_nutrient_system
   m_TagString: Untagged
@@ -36,6 +37,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -180.016, y: 0, z: 0}
+--- !u!114 &3597111058436313980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2331639611596983020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ab7f8fb48a24fc4fa4980bb40267b96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  plant_prefabs: []
+  plantName: 
+  target_oxygen: 0
+  target_water: 0
+  target_nutrient: 0
+  plant_placeholder: {fileID: 0}
+  barcode: {fileID: 0}
 --- !u!1 &2331639611753318237
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,6 +1437,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d68b066039784642883eaef9238e38d, type: 3}
+--- !u!4 &6984947889584312231 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8678552055743010290, guid: 1d68b066039784642883eaef9238e38d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1774396280567880277}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &6984947890735358079 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8678552056625166890, guid: 1d68b066039784642883eaef9238e38d,
@@ -1435,12 +1461,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b19340d74853f5489b68315e63ffb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &6984947889584312231 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8678552055743010290, guid: 1d68b066039784642883eaef9238e38d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1774396280567880277}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2331639611524663168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1825,17 +1845,17 @@ PrefabInstance:
     - target: {fileID: 1235974323124037656, guid: cd04c0f3143b0a24dbfa244239a98cad,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.6505995
+      value: -0.61240005
       objectReference: {fileID: 0}
     - target: {fileID: 1235974323124037656, guid: cd04c0f3143b0a24dbfa244239a98cad,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.2960003
+      value: 0.33460027
       objectReference: {fileID: 0}
     - target: {fileID: 1235974323124037656, guid: cd04c0f3143b0a24dbfa244239a98cad,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 0.26122475
+      value: 0.2612244
       objectReference: {fileID: 0}
     - target: {fileID: 1235974323124037657, guid: cd04c0f3143b0a24dbfa244239a98cad,
         type: 3}
@@ -1881,12 +1901,12 @@ PrefabInstance:
     - target: {fileID: 1235974324232496757, guid: cd04c0f3143b0a24dbfa244239a98cad,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.9379
+      value: 2.957
       objectReference: {fileID: 0}
     - target: {fileID: 1235974324232496757, guid: cd04c0f3143b0a24dbfa244239a98cad,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.585
+      value: 0.6043
       objectReference: {fileID: 0}
     - target: {fileID: 1235974324232496757, guid: cd04c0f3143b0a24dbfa244239a98cad,
         type: 3}
@@ -2001,12 +2021,12 @@ PrefabInstance:
     - target: {fileID: 1235974323124037656, guid: cd04c0f3143b0a24dbfa244239a98cad,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -0.14179999
+      value: -0.016000092
       objectReference: {fileID: 0}
     - target: {fileID: 1235974323124037656, guid: cd04c0f3143b0a24dbfa244239a98cad,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 0.34949
+      value: 0.35000002
       objectReference: {fileID: 0}
     - target: {fileID: 1235974323124037661, guid: cd04c0f3143b0a24dbfa244239a98cad,
         type: 3}
@@ -2042,12 +2062,12 @@ PrefabInstance:
     - target: {fileID: 1235974324232496757, guid: cd04c0f3143b0a24dbfa244239a98cad,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.3661
+      value: 0.429
       objectReference: {fileID: 0}
     - target: {fileID: 1235974324232496757, guid: cd04c0f3143b0a24dbfa244239a98cad,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.7655
+      value: 0.766
       objectReference: {fileID: 0}
     - target: {fileID: 1235974324232496757, guid: cd04c0f3143b0a24dbfa244239a98cad,
         type: 3}
@@ -2447,6 +2467,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d68b066039784642883eaef9238e38d, type: 3}
+--- !u!4 &1912679738941807090 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8678552055743010290, guid: 1d68b066039784642883eaef9238e38d,
+    type: 3}
+  m_PrefabInstance: {fileID: 7132396739515567104}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &1912679739938190890 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8678552056625166890, guid: 1d68b066039784642883eaef9238e38d,
@@ -2465,12 +2491,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b19340d74853f5489b68315e63ffb5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &1912679738941807090 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8678552055743010290, guid: 1d68b066039784642883eaef9238e38d,
-    type: 3}
-  m_PrefabInstance: {fileID: 7132396739515567104}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7181397577207477983
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2491,12 +2511,12 @@ PrefabInstance:
     - target: {fileID: 1235974323124037656, guid: cd04c0f3143b0a24dbfa244239a98cad,
         type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 0.28399998
+      value: 0.33600003
       objectReference: {fileID: 0}
     - target: {fileID: 1235974323124037656, guid: cd04c0f3143b0a24dbfa244239a98cad,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 0.42763117
+      value: 0.42763105
       objectReference: {fileID: 0}
     - target: {fileID: 1235974323124037657, guid: cd04c0f3143b0a24dbfa244239a98cad,
         type: 3}
@@ -2542,7 +2562,7 @@ PrefabInstance:
     - target: {fileID: 1235974324232496757, guid: cd04c0f3143b0a24dbfa244239a98cad,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.299
+      value: 0.325
       objectReference: {fileID: 0}
     - target: {fileID: 1235974324232496757, guid: cd04c0f3143b0a24dbfa244239a98cad,
         type: 3}

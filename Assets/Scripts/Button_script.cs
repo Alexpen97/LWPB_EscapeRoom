@@ -19,6 +19,7 @@ public class Button_script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (gameObject.transform.localPosition.y <= TargetValue && !Triggered)
         {
             Debug.Log("triggerd");
