@@ -24,7 +24,7 @@ public class Plant_pods_controller : MonoBehaviour
     {
         foreach (Plant_pod_script pod_Script in podscripts)
         {
-            int selectionNumber = Random.Range(0, 11);
+            int selectionNumber = (int)pod_Script.plant_selection;
             pod_Script.plant_prefabs = Plant_DB.PlantPorperties[selectionNumber].plant_prefabs;
             pod_Script.plantName = Plant_DB.PlantPorperties[selectionNumber].dropDown.ToString().Replace("_"," ");
             pod_Script.target_oxygen = Plant_DB.PlantPorperties[selectionNumber].oxygen;

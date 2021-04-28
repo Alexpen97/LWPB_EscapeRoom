@@ -6,6 +6,21 @@ using UnityEngine;
 
 public class Plant_pod_script : MonoBehaviour
 {
+    public enum Selected_plant { 
+             one = 0
+            ,two = 1
+            ,three = 2
+            ,four = 3
+            ,five = 4
+            ,six = 5
+            ,seven = 6
+            ,eight = 7
+            ,nine = 8
+            ,ten = 9
+            ,eleven = 10
+            ,twelve = 11 
+    }
+    public Selected_plant plant_selection = Selected_plant.one;
     public List<GameObject> plant_prefabs;
     public string plantName;
 
@@ -38,6 +53,7 @@ public class Plant_pod_script : MonoBehaviour
     void Start()
     {
         
+
     }
 
     // Update is called once per frame

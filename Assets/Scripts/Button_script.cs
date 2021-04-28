@@ -8,12 +8,14 @@ public class Button_script : MonoBehaviour
 
     public float TargetValue;
     public UnityEvent onTrigger;
+    private float ButtonCooldown = 3.0f;
 
     private bool Triggered;
     // Start is called before the first frame update
     void Start()
     {
         Triggered = false;
+
     }
 
     // Update is called once per frame
@@ -25,6 +27,16 @@ public class Button_script : MonoBehaviour
             Debug.Log("triggerd");
             onTrigger.Invoke();
             Triggered = true;
+        }
+
+        if (Triggered)
+        {
+            ButtonCooldown -= Time.deltaTime;
+            if(ButtonCooldown < 0)
+            {
+                Triggered = false;
+                ButtonCooldown = 3.0f;
+            }
         }
     }
 }
