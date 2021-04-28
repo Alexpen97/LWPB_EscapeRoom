@@ -25,6 +25,8 @@ public class liftAnim : MonoBehaviour // liftAnim and C# file name must be the s
 	private int bottomed;
 	private float animFrame;
 	private int upDownDirection = 0;
+	public bool moveUp = false;
+	public bool moveDown = false;
 
 
 	void Start() // Sets up Starting conditions
@@ -34,14 +36,14 @@ public class liftAnim : MonoBehaviour // liftAnim and C# file name must be the s
 		goUp = 0;
 		topped = 0;
 		bottomed = 1;
-		Pause();
-	}
+        Pause();
+    }
 	
 	void Update() // Runs once every frame
 	{	
 		animFrame = anim.GetCurrentAnimatorStateInfo(0).normalizedTime;
 	
-		if (upDownDirection == 1)// Modify UpArrow to any other button on the keyboard to raise the lift.
+		if (moveUp)// Modify UpArrow to any other button on the keyboard to raise the lift.
 		{
 			switch(goUp)
 			{
@@ -50,15 +52,18 @@ public class liftAnim : MonoBehaviour // liftAnim and C# file name must be the s
 				break;
 				
 				case 1:
-				Pause();
+				
 				break;
 				
 				default:
 				break;
 			}
-		}
+		}else
+        {
+			Pause();
+        }
 
-		if (upDownDirection == -1) // Modify DownArrow to any other button on the keyboard to lower the lift.
+		if (moveDown) // Modify DownArrow to any other button on the keyboard to lower the lift.
 		{
 			switch(goDown)
 			{
@@ -67,7 +72,7 @@ public class liftAnim : MonoBehaviour // liftAnim and C# file name must be the s
 				break;
 				
 				case 1:
-				Pause();
+				
 				break;
 				
 				default:
@@ -75,14 +80,14 @@ public class liftAnim : MonoBehaviour // liftAnim and C# file name must be the s
 			}
 		}
 		
-		if(animFrame > 1.0f) // Check if we reched the top
-		{
-			topMax();
-		}
-		if(animFrame < 0.0f) // Ceck if we reched the bottom
-		{
-			bottomMax();
-		}
+		//if(animFrame > 1.0f) // Check if we reched the top
+		//{
+		//	topMax();
+		//}
+		//if(animFrame < 0.0f) // Ceck if we reched the bottom
+		//{
+		//	bottomMax();
+		//}
 	}
 	
 	void Up() // Start raising the lift
@@ -112,54 +117,61 @@ public class liftAnim : MonoBehaviour // liftAnim and C# file name must be the s
 		anim.speed = 0.0f;
 	}
 	
-	void topMax() // Stop if we reached the top
-	{
-		switch(topped)
-		{
-			case 0:
-			goUp = 2;
-			anim.speed = 0.0f;
-			goDown = 0;
-			topped = 1;
-			bottomed = 0;
-			break;
+	//void topMax() // Stop if we reached the top
+	//{
+	//	switch(topped)
+	//	{
+	//		case 0:
+	//		goUp = 2;
+	//		anim.speed = 0.0f;
+	//		goDown = 0;
+	//		topped = 1;
+	//		bottomed = 0;
+	//		break;
 			
-			default:
-			topped = 1;
-			break;
-		}
-	}
+	//		default:
+	//		topped = 1;
+	//		break;
+	//	}
+	//}
 	
-	void bottomMax() // Stop if we reached the bottom
-	{
-		switch(bottomed)
-		{
-			case 0:
-			goDown = 2;
-			anim.speed = 0.0f;
-			goUp = 0;
-			bottomed = 1;
-			topped = 0;
-			break;
+	//void bottomMax() // Stop if we reached the bottom
+	//{
+	//	switch(bottomed)
+	//	{
+	//		case 0:
+	//		goDown = 2;
+	//		anim.speed = 0.0f;
+	//		goUp = 0;
+	//		bottomed = 1;
+	//		topped = 0;
+	//		break;
 			
-			default:
-			bottomed = 1;
-			break;
-		}
-	}
+	//		default:
+	//		bottomed = 1;
+	//		break;
+	//	}
+	//}
 
-	public void buttonPress()
-	{
-		if (upDownDirection == 1)
-		{
-			upDownDirection = -1;
-			Down();
-		}
-		else
-		{
-			Up();
-			upDownDirection = 1;
-		}
+	//public void buttonPressDown()
+	//{
+	//		upDownDirection = -1;
+	//		Down();
+ //   }
+
+	//public void buttonPressUp()
+	//{
+	//		Up();
+	//		upDownDirection = 1;
+	//}
+
+	public void boolsetUp(bool b)
+    {
+		moveUp = b;
     }
+	public void boolsetDown(bool b)
+	{
+		moveDown = b;
+	}
 
 }
