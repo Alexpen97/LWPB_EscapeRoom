@@ -30,10 +30,17 @@ public class ChargingPortScript : MonoBehaviour
     }
 
     void chargeCell(GameObject go){
-        //var grabi= go.GetComponent<UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable>();
+
+        // make ungrabbable
+        var grabi= go.GetComponent<UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable>();
+        grabi.selectingInteractor.EndManualInteraction();
+        grabi.enabled=false;
+
+        // make unmovable
         var rigi = go.GetComponent<Rigidbody>();
         rigi.isKinematic=true;
 
+        // Snap to position
         go.transform.SetPositionAndRotation(this.transform.position,this.transform.rotation);
         go.GetComponent<powercell_script>().switchState(CellState.CHARGING);
     }

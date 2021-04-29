@@ -1381,7 +1381,7 @@ GameObject:
   - component: {fileID: 5773952400994387525}
   - component: {fileID: 258427275905651207}
   - component: {fileID: 29115259371347845}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: total_cell
   m_TagString: powercell
   m_Icon: {fileID: 0}
