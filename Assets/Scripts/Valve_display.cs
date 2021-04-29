@@ -28,11 +28,11 @@ public class Valve_display : MonoBehaviour
             add();
         }
     }
-    public void subtract()
+    public void add()
     {
         nutrient_display.GetComponent<Slider>().value = nutrient_display.GetComponent<Slider>().value + offset_val;
     }
-    public void add()
+    public void subtract()
     {
         nutrient_display.GetComponent<Slider>().value = nutrient_display.GetComponent<Slider>().value - offset_val;
     }
