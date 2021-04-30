@@ -6,21 +6,23 @@ using UnityEngine;
 
 public class Plant_pod_script : MonoBehaviour
 {
-    public enum Selected_plant { 
-             one = 0
-            ,two = 1
-            ,three = 2
-            ,four = 3
-            ,five = 4
-            ,six = 5
-            ,seven = 6
-            ,eight = 7
-            ,nine = 8
-            ,ten = 9
-            ,eleven = 10
-            ,twelve = 11 
+    //  plant pod plant selection ENUM
+    public enum Selected_plant
+    {
+        Arctium_lappa = 0
+            , Pteropsida = 1
+            , Ignis_Herba = 2
+            , Corona_Flos = 3
+            , Taraxacum = 4
+            , Pluma = 5
+            , Brassica_oleracea = 6
+            , harambe_plumbus = 7
+            , Zizania = 8
+            , Vrouwentong = 9
+            , Heracleum_sphondylium = 10
+            , Kopstekel_Flora = 11
     }
-    public Selected_plant plant_selection = Selected_plant.one;
+    public Selected_plant plant_selection = Selected_plant.Arctium_lappa;
     public List<GameObject> plant_prefabs;
     public string plantName;
 
@@ -52,7 +54,7 @@ public class Plant_pod_script : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
 
     }
 
@@ -63,7 +65,7 @@ public class Plant_pod_script : MonoBehaviour
         /*Nutrient balance checking
          * this part of code checks if the nutrients are correctly balanced
          */
-         //oxygen
+        //oxygen
         if ((oxygen_current.value * 100) > (target_oxygen - 5))
         {
             if ((oxygen_current.value * 100) < (target_oxygen + 5))
@@ -80,7 +82,7 @@ public class Plant_pod_script : MonoBehaviour
             oxygen = false;
         }
         //water
-             if ((water_current.value * 100) > (target_water - 5))
+        if ((water_current.value * 100) > (target_water - 5))
         {
             if ((water_current.value * 100) < (target_water + 5))
             {
@@ -95,7 +97,7 @@ public class Plant_pod_script : MonoBehaviour
         {
             water = false;
         }
-             //nutrients
+        //nutrients
 
         if ((nutrient_current.value * 100) > (target_nutrient - 5))
         {
@@ -132,12 +134,14 @@ public class Plant_pod_script : MonoBehaviour
         }
 
     }
+//Handles the first spawning of the plant, aswell as chance calculation if its broken
     public void spawnPlant()
     {
         GameObject.Destroy(plant_placeholder.transform.GetChild(0).gameObject);
-        GameObject newplant = Instantiate(plant_prefabs[Random.Range(0, plant_prefabs.Count)],plant_placeholder.transform);
+        GameObject newplant = Instantiate(plant_prefabs[Random.Range(0, plant_prefabs.Count)], plant_placeholder.transform);
         newplant.transform.localPosition = new Vector3(0, 0, 0);
         newplant.transform.parent = plant_placeholder.transform;
+
 
         barcode.GetComponent<Barcode>().Code_value = plantName;
 
@@ -148,11 +152,11 @@ public class Plant_pod_script : MonoBehaviour
             oxygen_current.value = Random.Range(0.0f, 1.0f);
             water_current.value = Random.Range(0.0f, 1.0f);
             nutrient_current.value = Random.Range(0.0f, 1.0f);
-            if(Random.Range(0, 100) < 25)
+            if (Random.Range(0, 100) < 25)
             {
-             onfire = true;
+                onfire = true;
             }
-            
+
         }
 
     }
