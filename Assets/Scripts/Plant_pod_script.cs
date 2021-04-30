@@ -126,11 +126,11 @@ public class Plant_pod_script : MonoBehaviour
 
         if (onfire)
         {
-            fire_placeholder.active = true;
+            fire_placeholder.SetActive(true);
         }
         else
         {
-            fire_placeholder.active = false;
+            fire_placeholder.SetActive(false);
         }
 
     }
