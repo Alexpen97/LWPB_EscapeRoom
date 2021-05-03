@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
+using UnityEngine.XR.Interaction.Toolkit.Inputs.Interactions;
 
 public class ChargingPortScript : MonoBehaviour
 {
@@ -33,12 +34,15 @@ public class ChargingPortScript : MonoBehaviour
 
         // make ungrabbable
         var grabi= go.GetComponent<UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable>();
-        grabi.selectingInteractor.EndManualInteraction();
+        grabi.interactionLayerMask=0; // make ungrabbable
+        if(grabi.selectingInteractor!=null) grabi.selectingInteractor.EndManualInteraction(); // drop if grabbed
+        go.transform.parent=null;
         grabi.enabled=false;
 
         // make unmovable
         var rigi = go.GetComponent<Rigidbody>();
         rigi.isKinematic=true;
+        rigi.useGravity=false;
 
         // Snap to position
         go.transform.SetPositionAndRotation(this.transform.position,this.transform.rotation);
