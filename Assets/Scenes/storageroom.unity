@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -84267,6 +84267,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1526810501}
   m_Mesh: {fileID: -2755752244847351678, guid: ad0fc55b4f19d434eb635198d3e817c0, type: 3}
+--- !u!1 &1526948054 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8728033014347069516, guid: a63e5172c36c33d45a3021929bb8aa97,
+    type: 3}
+  m_PrefabInstance: {fileID: 235715355}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1527557930
 GameObject:
   m_ObjectHideFlags: 0
@@ -117699,6 +117705,8 @@ GameObject:
   - component: {fileID: 4449887727773683}
   - component: {fileID: 33931661509411471}
   - component: {fileID: 23106394968865613}
+  - component: {fileID: 1956407591141895}
+  - component: {fileID: 1956407591141894}
   m_Layer: 0
   m_Name: base
   m_TagString: Untagged
@@ -117706,6 +117714,32 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1956407591141894
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956407591141893}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.183615, y: 0.16907626, z: 2.4104247}
+  m_Center: {x: 0, y: -0.37119612, z: 0}
+--- !u!114 &1956407591141895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956407591141893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f86d255ce7e58ae4c898cd8e87cb68d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vrPlayer: {fileID: 1526948054}
 --- !u!4 &4040626033717393
 Transform:
   m_ObjectHideFlags: 0
