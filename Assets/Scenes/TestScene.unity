@@ -497,6 +497,126 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5780868936199211585, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
+        type: 3}
+      propertyPath: PlantPorperties.Array.data[0].Dead_texture
+      value: 
+      objectReference: {fileID: 2100000, guid: d26b45d660447e149ae7dad08ff63a69, type: 2}
+    - target: {fileID: 5780868936199211585, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
+        type: 3}
+      propertyPath: PlantPorperties.Array.data[1].Dead_texture
+      value: 
+      objectReference: {fileID: 2100000, guid: 947728d89a0a0864583791ca00316bca, type: 2}
+    - target: {fileID: 5780868936199211585, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
+        type: 3}
+      propertyPath: PlantPorperties.Array.data[2].Dead_texture
+      value: 
+      objectReference: {fileID: 2100000, guid: d26b45d660447e149ae7dad08ff63a69, type: 2}
+    - target: {fileID: 5780868936199211585, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
+        type: 3}
+      propertyPath: PlantPorperties.Array.data[3].Dead_texture
+      value: 
+      objectReference: {fileID: 2100000, guid: d26b45d660447e149ae7dad08ff63a69, type: 2}
+    - target: {fileID: 5780868936199211585, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
+        type: 3}
+      propertyPath: PlantPorperties.Array.data[4].Dead_texture
+      value: 
+      objectReference: {fileID: 2100000, guid: d26b45d660447e149ae7dad08ff63a69, type: 2}
+    - target: {fileID: 5780868936199211585, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
+        type: 3}
+      propertyPath: PlantPorperties.Array.data[5].Dead_texture
+      value: 
+      objectReference: {fileID: 2100000, guid: 991f5b4a169efd84bb47b187fe41235d, type: 2}
+    - target: {fileID: 5780868936199211585, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
+        type: 3}
+      propertyPath: PlantPorperties.Array.data[6].Dead_texture
+      value: 
+      objectReference: {fileID: 2100000, guid: 991f5b4a169efd84bb47b187fe41235d, type: 2}
+    - target: {fileID: 5780868936199211585, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
+        type: 3}
+      propertyPath: PlantPorperties.Array.data[7].Dead_texture
+      value: 
+      objectReference: {fileID: 2100000, guid: 991f5b4a169efd84bb47b187fe41235d, type: 2}
+    - target: {fileID: 5780868936199211585, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
+        type: 3}
+      propertyPath: PlantPorperties.Array.data[8].Dead_texture
+      value: 
+      objectReference: {fileID: 2100000, guid: 313761bc75cbde546810026cdc8dced5, type: 2}
+    - target: {fileID: 5780868936199211585, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
+        type: 3}
+      propertyPath: PlantPorperties.Array.data[9].Dead_texture
+      value: 
+      objectReference: {fileID: 2100000, guid: 313761bc75cbde546810026cdc8dced5, type: 2}
+    - target: {fileID: 5780868936199211585, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
+        type: 3}
+      propertyPath: PlantPorperties.Array.data[0].Alive_texture
+      value: 
+      objectReference: {fileID: 2100000, guid: 9f4b0863ca69fe04995dff2282ac5c76, type: 2}
+    - target: {fileID: 5780868936199211585, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
+        type: 3}
+      propertyPath: PlantPorperties.Array.data[10].Dead_texture
+      value: 
+      objectReference: {fileID: 2100000, guid: 313761bc75cbde546810026cdc8dced5, type: 2}
+    - target: {fileID: 5780868936199211585, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
+        type: 3}
+      propertyPath: PlantPorperties.Array.data[11].Dead_texture
+      value: 
+      objectReference: {fileID: 2100000, guid: d26b45d660447e149ae7dad08ff63a69, type: 2}
+    - target: {fileID: 5780868936199211585, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
+        type: 3}
+      propertyPath: PlantPorperties.Array.data[1].Alive_texture
+      value: 
+      objectReference: {fileID: 2100000, guid: 759b31cdc4b1c0b47b443994728da8a2, type: 2}
+    - target: {fileID: 5780868936199211585, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
+        type: 3}
+      propertyPath: PlantPorperties.Array.data[2].Alive_texture
+      value: 
+      objectReference: {fileID: 2100000, guid: 9f4b0863ca69fe04995dff2282ac5c76, type: 2}
+    - target: {fileID: 5780868936199211585, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
+        type: 3}
+      propertyPath: PlantPorperties.Array.data[3].Alive_texture
+      value: 
+      objectReference: {fileID: 2100000, guid: 9f4b0863ca69fe04995dff2282ac5c76, type: 2}
+    - target: {fileID: 5780868936199211585, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
+        type: 3}
+      propertyPath: PlantPorperties.Array.data[4].Alive_texture
+      value: 
+      objectReference: {fileID: 2100000, guid: 9f4b0863ca69fe04995dff2282ac5c76, type: 2}
+    - target: {fileID: 5780868936199211585, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
+        type: 3}
+      propertyPath: PlantPorperties.Array.data[5].Alive_texture
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f8d6151fec456340b02b69e12113557, type: 2}
+    - target: {fileID: 5780868936199211585, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
+        type: 3}
+      propertyPath: PlantPorperties.Array.data[6].Alive_texture
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f8d6151fec456340b02b69e12113557, type: 2}
+    - target: {fileID: 5780868936199211585, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
+        type: 3}
+      propertyPath: PlantPorperties.Array.data[7].Alive_texture
+      value: 
+      objectReference: {fileID: 2100000, guid: 1f8d6151fec456340b02b69e12113557, type: 2}
+    - target: {fileID: 5780868936199211585, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
+        type: 3}
+      propertyPath: PlantPorperties.Array.data[8].Alive_texture
+      value: 
+      objectReference: {fileID: 2100000, guid: e0c8853c3c3719e47ace13cd5771feae, type: 2}
+    - target: {fileID: 5780868936199211585, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
+        type: 3}
+      propertyPath: PlantPorperties.Array.data[9].Alive_texture
+      value: 
+      objectReference: {fileID: 2100000, guid: e0c8853c3c3719e47ace13cd5771feae, type: 2}
+    - target: {fileID: 5780868936199211585, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
+        type: 3}
+      propertyPath: PlantPorperties.Array.data[10].Alive_texture
+      value: 
+      objectReference: {fileID: 2100000, guid: e0c8853c3c3719e47ace13cd5771feae, type: 2}
+    - target: {fileID: 5780868936199211585, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
+        type: 3}
+      propertyPath: PlantPorperties.Array.data[11].Alive_texture
+      value: 
+      objectReference: {fileID: 2100000, guid: 9f4b0863ca69fe04995dff2282ac5c76, type: 2}
     - target: {fileID: 5780868936199211598, guid: 9b1657e6f6b13af4dbbbb1ebd5593be2,
         type: 3}
       propertyPath: m_Name
@@ -550,6 +670,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3325317353081998883, guid: d8fb5a7a2b14b7840860459058e9b11a,
+        type: 3}
+      propertyPath: plant_selection
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3661688269835132921, guid: d8fb5a7a2b14b7840860459058e9b11a,
         type: 3}
