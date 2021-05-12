@@ -7,18 +7,18 @@ public class platformAttach : MonoBehaviour
 
     public GameObject vrPlayer;
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == vrPlayer)
+        if (other.gameObject.tag == "Player")
         {
             vrPlayer.transform.parent = transform;
-            print("ben ik er van af");
+            print("ben ik er op");
         }
     }
 
-    private void OnCollisionExit(Collision other)
+    private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject == vrPlayer)
+        if (other.gameObject.tag == "Player")
         {
             vrPlayer.transform.parent = null;
             print("ben ik er van af");

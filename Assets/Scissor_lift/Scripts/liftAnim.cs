@@ -1,15 +1,8 @@
-/*///////////////////////////////////////////////////////
-/														/
-/					BVG TEAM - Vik						/
-/														/
-/				 Scissor Lift Control					/
-/														/
-/														/
-///////////////////////////////////////////////////////*/
-
 /* 
-The script raises the lift up when the up arrow is pressed. It stops when it reaches the top or if the up arrow is pressed again.
-It also lowers the lift, if the down arrow is pressed. It stops when it reaches the bottom, or when the down arrow is pressed again.
+The script raises the lift up when the up button is pressed. It stops when you release the button, and starts again when you press the button.
+It also lowers the lift, if the down button is pressed. and stops when you release the down button, and starts to go down when the down button is pressed again.
+Also the crane can turn when the left or right turn button is pressed, it stops turn when the button is released. 
+It will start turning again when the turn button is pressed again.
 */
 
 using UnityEngine;
@@ -17,33 +10,32 @@ using System.Collections;
  
 public class liftAnim : MonoBehaviour // liftAnim and C# file name must be the same
 {
-
+	//Private variables
 	private Animator anim;
 	private int goUp;
 	private int goDown;
-	private int topped;
-	private int bottomed;
 	private float animFrame;
-	private int upDownDirection = 0;
+
+	//Public variables
 	public bool moveUp = false;
 	public bool moveDown = false;
 
 
-	void Start() // Sets up Starting conditions
+	// Sets up Starting conditions
+	void Start() 
 	{
 		anim = GetComponent<Animator>();
 		goDown = 2;
 		goUp = 0;
-		topped = 0;
-		bottomed = 1;
         Pause();
     }
-	
-	void Update() // Runs once every frame
+
+	// Runs once every frame
+	void Update() 
 	{	
 		animFrame = anim.GetCurrentAnimatorStateInfo(0).normalizedTime;
 	
-		if (moveUp)// Modify UpArrow to any other button on the keyboard to raise the lift.
+		if (moveUp)
 		{
 			switch(goUp)
 			{
@@ -63,7 +55,7 @@ public class liftAnim : MonoBehaviour // liftAnim and C# file name must be the s
 			Pause();
         }
 
-		if (moveDown) // Modify DownArrow to any other button on the keyboard to lower the lift.
+		if (moveDown) 
 		{
 			switch(goDown)
 			{
@@ -79,18 +71,10 @@ public class liftAnim : MonoBehaviour // liftAnim and C# file name must be the s
 				break;
 			}
 		}
-		
-		//if(animFrame > 1.0f) // Check if we reched the top
-		//{
-		//	topMax();
-		//}
-		//if(animFrame < 0.0f) // Ceck if we reched the bottom
-		//{
-		//	bottomMax();
-		//}
 	}
-	
-	void Up() // Start raising the lift
+
+	// Start raising the lift
+	void Up() 
 	{
 		anim.SetFloat ("Direction", 1);
 		anim.speed = 1.0f;
@@ -99,7 +83,8 @@ public class liftAnim : MonoBehaviour // liftAnim and C# file name must be the s
 		goDown = 2;
 	}
 
-	void Down() // Start lowering the lift
+	// Start lowering the lift
+	void Down() 
 	{
 		anim.SetFloat ("Direction", -1);
 		anim.speed = 1.0f;
@@ -107,64 +92,16 @@ public class liftAnim : MonoBehaviour // liftAnim and C# file name must be the s
 		goDown = 1;
 		goUp = 2;
 	}
-	
-	void Pause() // Stop the lift where it is
+
+	// Stop the lift where it is
+	void Pause() 
 	{
 		goUp = 0;
 		goDown = 0;
-		topped = 0;
-		bottomed = 0;
 		anim.speed = 0.0f;
 	}
-	
-	//void topMax() // Stop if we reached the top
-	//{
-	//	switch(topped)
-	//	{
-	//		case 0:
-	//		goUp = 2;
-	//		anim.speed = 0.0f;
-	//		goDown = 0;
-	//		topped = 1;
-	//		bottomed = 0;
-	//		break;
-			
-	//		default:
-	//		topped = 1;
-	//		break;
-	//	}
-	//}
-	
-	//void bottomMax() // Stop if we reached the bottom
-	//{
-	//	switch(bottomed)
-	//	{
-	//		case 0:
-	//		goDown = 2;
-	//		anim.speed = 0.0f;
-	//		goUp = 0;
-	//		bottomed = 1;
-	//		topped = 0;
-	//		break;
-			
-	//		default:
-	//		bottomed = 1;
-	//		break;
-	//	}
-	//}
 
-	//public void buttonPressDown()
-	//{
-	//		upDownDirection = -1;
-	//		Down();
- //   }
-
-	//public void buttonPressUp()
-	//{
-	//		Up();
-	//		upDownDirection = 1;
-	//}
-
+	//Booleans for the true or flase state of the button press
 	public void boolsetUp(bool b)
     {
 		moveUp = b;
@@ -173,5 +110,4 @@ public class liftAnim : MonoBehaviour // liftAnim and C# file name must be the s
 	{
 		moveDown = b;
 	}
-
 }

@@ -17,9 +17,9 @@ public class ControllerMovementScript : MonoBehaviour
         if (moveF)
             transform.Translate(0, 0, speed * Time.deltaTime);
         if (rotateL)
-            transform.Rotate(0, -40f * Time.deltaTime , 0);
+            transform.Rotate(0, -20f * Time.deltaTime , 0);
         if (rotateR)
-            transform.Rotate(0, 40f * Time.deltaTime, 0);
+            transform.Rotate(0, 20f * Time.deltaTime, 0);
     }
 
     public void boolSetF(bool b)

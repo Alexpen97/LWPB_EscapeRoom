@@ -47,14 +47,6 @@ public class Physics_button : MonoBehaviour
         }
     }
 
-    //private void OnCollisionEnter(Collision collision)
-    //{
-    //    if (collision.transform.tag == "Hands")
-    //    {
-    //        Pressed();
-    //    }
-    //}
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Hands")
@@ -99,14 +91,12 @@ public class Physics_button : MonoBehaviour
     {
         _isPressed = true;
         onPressed.Invoke();
-        Debug.Log("Pressed");
     }
 
     private void Released()
     {
         _isPressed = false;
         onReleased.Invoke();
-        Debug.Log("Released");
     }
 
 
