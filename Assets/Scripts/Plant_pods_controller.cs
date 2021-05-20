@@ -36,6 +36,32 @@ public class Plant_pods_controller : MonoBehaviour
             }
 
         }
-
+    public int getBrokenPods()
+    {
+        int pods = 0;
+        foreach(Plant_pod_script pod_Script in podscripts)
+        {
+            if(pod_Script.Nutrients_balanced == false)
+            {
+                pods++;
+            }
+        }
+        return pods;
     }
+    public int getWorkingPods()
+    {
+        int pods = 0;
+        foreach (Plant_pod_script pod_Script in podscripts)
+        {
+            if (pod_Script.Nutrients_balanced == true)
+            {
+                pods++;
+            }
+        }
+        return pods;
+    }
+
+
+
+}
 
