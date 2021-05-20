@@ -28,12 +28,12 @@ public class Plant_pod_script : MonoBehaviour
     public Material Dead_texture;
     public string plantName;
 
-    [Range(0, 100)]
-    public int target_oxygen;
-    [Range(0, 100)]
-    public int target_water;
-    [Range(0, 100)]
-    public int target_nutrient;
+    [Range(1.0f, 0.0f)]
+    public float target_oxygen;
+    [Range(1.0f, 0.0f)]
+    public float target_water;
+    [Range(1.0f, 0.0f)]
+    public float target_nutrient;
 
     public Slider oxygen_current;
     public Slider water_current;
@@ -69,9 +69,9 @@ public class Plant_pod_script : MonoBehaviour
          * this part of code checks if the nutrients are correctly balanced
          */
         //oxygen
-        if ((oxygen_current.value * 100) > (target_oxygen - 5))
+        if ((oxygen_current.value ) > (target_oxygen - 0.05))
         {
-            if ((oxygen_current.value * 100) < (target_oxygen + 5))
+            if ((oxygen_current.value ) < (target_oxygen + 0.05))
             {
                 oxygen = true;
             }
@@ -85,9 +85,9 @@ public class Plant_pod_script : MonoBehaviour
             oxygen = false;
         }
         //water
-        if ((water_current.value * 100) > (target_water - 5))
+        if ((water_current.value ) > (target_water - 0.05))
         {
-            if ((water_current.value * 100) < (target_water + 5))
+            if ((water_current.value ) < (target_water + 0.05))
             {
                 water = true;
             }
@@ -102,9 +102,9 @@ public class Plant_pod_script : MonoBehaviour
         }
         //nutrients
 
-        if ((nutrient_current.value * 100) > (target_nutrient - 5))
+        if ((nutrient_current.value ) > (target_nutrient - 0.05))
         {
-            if ((nutrient_current.value * 100) < (target_nutrient + 5))
+            if ((nutrient_current.value ) < (target_nutrient + 0.05))
             {
                 nutrient = true;
             }
@@ -164,6 +164,12 @@ public class Plant_pod_script : MonoBehaviour
                 onfire = true;
             }
 
+        }
+        else
+        {
+            oxygen_current.value = target_oxygen;
+            water_current.value = target_water;
+            nutrient_current.value = target_nutrient;
         }
 
     }
