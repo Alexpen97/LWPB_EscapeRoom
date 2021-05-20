@@ -24,6 +24,23 @@ public class platformAttach : MonoBehaviour
             print("ben ik er van af");
         }
     }
+    //public void onActivate()
+    //{
+    //    if (gameObject.tag == "Player")
+    //    {
+    //        vrPlayer.transform.parent = transform;
+    //        print("ben ik er op");
+    //    }
+    //}
+
+    //public void onDeactivate()
+    //{
+    //    if (gameObject.tag == "Player")
+    //    {
+    //        vrPlayer.transform.parent = null;
+    //        print("ben ik er van af");
+    //    }
+    //}
 
 
 }
