@@ -102,7 +102,7 @@ public class GeneratorScript : MonoBehaviour
         // close opening hatch
         hatch.GetComponent<HatchScript>().closeHatch();
 
-        // TODO activate sound
+        GetComponent<AudioSource>().Play();
 
         // send generator activated signal.
         generatorStarted.Invoke();
