@@ -33,6 +33,7 @@ public class GeneratorScript : MonoBehaviour
     }
 
     GameObject currentCell;
+    bool iscellTaken=false;
 
     void takeCell(GameObject powercell){
 
@@ -70,12 +71,14 @@ public class GeneratorScript : MonoBehaviour
         // Snap to position and rotation
         currentCell.transform.localPosition=new Vector3(0f,0.645f,-0.7f);
         currentCell.transform.localEulerAngles=new Vector3(-90f,0f,0f);
+
+        iscellTaken=false;
     }
 
     // Update is called once per frame
     // if there is a current cell, it should move its relative Z position from -0.7 to 0.5 in about 4 seconds.
     void Update(){
-        if(currentCell==null|| (currentCell.transform.localPosition.z >=0.5) ) return;
+        if(currentCell==null || iscellTaken ) return;
         
         Vector3 transform=currentCell.transform.localPosition;
 
@@ -89,6 +92,7 @@ public class GeneratorScript : MonoBehaviour
 
     // called when the powercell is fully inside the generator.
     void cellTaken(){
+        iscellTaken=true;
 
         Debug.Log("Cell taken, "+ (cellsNeeded-1) + " cells remaining");
 
