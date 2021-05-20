@@ -1,17 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GeneratorScript : MonoBehaviour
 {
     public int cellsNeeded=1;
     public float moveInTime=4f;
 
-    public GameObject hatch;
+    public UnityEvent generatorStarted = new UnityEvent();
+
+    GameObject hatch;
 
     // Start is called before the first frame update
     void Start(){
-        this.GetComponent<LigthScript>().DisableLights();
+        hatch=transform.Find("Hinge/Hatch").gameObject;
         hatch.GetComponent<HatchScript>().openHatch();
     }
 
@@ -96,10 +99,13 @@ public class GeneratorScript : MonoBehaviour
 
 
     void powerup(){
-        this.GetComponent<LigthScript>().EnableLights();
-
+        // close opening hatch
         hatch.GetComponent<HatchScript>().closeHatch();
+
         // TODO activate sound
+
+        // send generator activated signal.
+        generatorStarted.Invoke();
     }
 
 }

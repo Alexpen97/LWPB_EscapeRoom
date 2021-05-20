@@ -285,7 +285,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cellsNeeded: 1
   moveInTime: 3
-  hatch: {fileID: 8228788183975628241}
+  generatorStarted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!135 &6012757502700880777
 SphereCollider:
   m_ObjectHideFlags: 0
