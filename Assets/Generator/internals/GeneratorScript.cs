@@ -33,40 +33,46 @@ public class GeneratorScript : MonoBehaviour
 
     void takeCell(GameObject powercell){
 
-        if(currentCell==null){
-            currentCell=powercell;
+        if(powercell==currentCell) return;
 
-            Debug.Log("Taking cell...");
-
-            // remove from hands
-            currentCell.transform.parent=null;
-
-            // make ungrabbable
-            var grabi = currentCell.GetComponent<UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable>();
-            grabi.interactionLayerMask=0; // make ungrabbable
-            grabi.enabled=false;
-            Destroy(grabi,0f);
-
-            // make unmovable
-            var rigi = currentCell.GetComponent<Rigidbody>();
-            rigi.isKinematic=true;
-            rigi.useGravity=false;
-            rigi.freezeRotation=true;
-            Destroy(rigi,0f);
-
-            // set relative to the generator
-            currentCell.transform.parent=gameObject.transform;
-
-            // Snap to position and rotation
-            currentCell.transform.localPosition=new Vector3(0f,0.645f,-0.7f);
-            currentCell.transform.localEulerAngles=new Vector3(-90f,0f,0f);
+        if(currentCell!=null){
+            // destroy the cell
+            Destroy(currentCell);
+            currentCell=null;
         }
+        
+        currentCell=powercell;
+
+        Debug.Log("Taking cell...");
+
+        // remove from hands
+        currentCell.transform.parent=null;
+
+        // make ungrabbable
+        var grabi = currentCell.GetComponent<UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable>();
+        grabi.interactionLayerMask=0; // make ungrabbable
+        grabi.enabled=false;
+        Destroy(grabi,0f);
+
+        // make unmovable
+        var rigi = currentCell.GetComponent<Rigidbody>();
+        rigi.isKinematic=true;
+        rigi.useGravity=false;
+        rigi.freezeRotation=true;
+        Destroy(rigi,0f);
+
+        // set relative to the generator
+        currentCell.transform.parent=gameObject.transform;
+
+        // Snap to position and rotation
+        currentCell.transform.localPosition=new Vector3(0f,0.645f,-0.7f);
+        currentCell.transform.localEulerAngles=new Vector3(-90f,0f,0f);
     }
 
     // Update is called once per frame
     // if there is a current cell, it should move its relative Z position from -0.7 to 0.5 in about 4 seconds.
     void Update(){
-        if(currentCell==null) return;
+        if(currentCell==null|| (currentCell.transform.localPosition.z >=0.5) ) return;
         
         Vector3 transform=currentCell.transform.localPosition;
 
@@ -82,10 +88,6 @@ public class GeneratorScript : MonoBehaviour
     void cellTaken(){
 
         Debug.Log("Cell taken, "+ (cellsNeeded-1) + " cells remaining");
-
-        // destroy the cell
-        Destroy(currentCell);
-        currentCell=null;
 
         // if all the cells are inserted, start the generator.
         cellsNeeded--;
