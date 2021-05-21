@@ -28,7 +28,6 @@ public class powercell_script : MonoBehaviour
     }
 
     public void switchState(CellState state){
-        Debug.Log("CELL changed state: "+cellState.ToString()+">>"+state.ToString());
         cellState=state;
 
         switch(cellState){

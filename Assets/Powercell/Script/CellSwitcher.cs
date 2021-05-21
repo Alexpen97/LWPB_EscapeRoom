@@ -13,7 +13,6 @@ public class CellSwitcher : MonoBehaviour
     
      private void OnTriggerEnter(Collider other){
 
-        Debug.Log("POWRCELL: OnTriggerEnter:"+other.gameObject.tag);
         if(true){ //ther.tag.Equals("charger")){
             AdvanceToNextCellType();
         }

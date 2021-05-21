@@ -47,8 +47,6 @@ public class GeneratorScript : MonoBehaviour
         
         currentCell=powercell;
 
-        Debug.Log("Taking cell...");
-
         // remove from hands
         currentCell.transform.parent=null;
 
@@ -93,8 +91,6 @@ public class GeneratorScript : MonoBehaviour
     // called when the powercell is fully inside the generator.
     void cellTaken(){
         iscellTaken=true;
-
-        Debug.Log("Cell taken, "+ (cellsNeeded-1) + " cells remaining");
 
         // if all the cells are inserted, start the generator.
         cellsNeeded--;
