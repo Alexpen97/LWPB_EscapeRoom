@@ -28,7 +28,6 @@ public class powercell_script : MonoBehaviour
     }
 
     public void switchState(CellState state){
-        Debug.Log("CELL changed state: "+cellState.ToString()+">>"+state.ToString());
         cellState=state;
 
         switch(cellState){
@@ -52,10 +51,12 @@ public class powercell_script : MonoBehaviour
                 // re-enable grabbability
                 var grabi= GetComponent<UnityEngine.XR.Interaction.Toolkit.XRGrabInteractable>();
                 grabi.enabled=true;
+                grabi.interactionLayerMask = LayerMask.GetMask("Interactable");
 
                 // when cell is full, re-enable movement that was disabled by charger for the charging process.
                 var rigi = GetComponent<Rigidbody>();
                 rigi.isKinematic=false;
+                rigi.useGravity=true;
 
             break;
         }
