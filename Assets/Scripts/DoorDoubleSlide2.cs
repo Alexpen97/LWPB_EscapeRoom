@@ -5,7 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorDoubleSlide2 : MonoBehaviour {
+public class DoorDoubleSlidee : MonoBehaviour {
     
     //Doors
     public Transform doorL = null;
