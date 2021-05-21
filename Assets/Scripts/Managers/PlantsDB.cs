@@ -29,12 +29,12 @@ public class PlantsDB : MonoBehaviour
         public Material Alive_texture;
         public Material Dead_texture;
         public PlantList dropDown = PlantList.Arctium_lappa;
-        [Range(0, 100)]
-        public int oxygen;
-        [Range(0, 100)]
-        public int water;
-        [Range(0, 100)]
-        public int nutrient;
+        [Range(1.0f, 0.0f)]
+        public float oxygen;
+        [Range(1.0f, 0.0f)]
+        public float water;
+        [Range(1.0f, 0.0f)]
+        public float nutrient;
     }
 
 
