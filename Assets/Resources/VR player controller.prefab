@@ -2781,6 +2781,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Main Camera
       objectReference: {fileID: 0}
+    - target: {fileID: 4424644019221175790, guid: f3e66ee7a283d1d43b9630774626f1da,
+        type: 3}
+      propertyPath: field of view
+      value: 106
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f3e66ee7a283d1d43b9630774626f1da, type: 3}
 --- !u!1 &8728033015776513268 stripped
@@ -3023,10 +3028,20 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 5690316021177917775, guid: 089d38c2beff1f044b446797593d7269,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hands
+      objectReference: {fileID: 0}
     - target: {fileID: 7299540221420743629, guid: 089d38c2beff1f044b446797593d7269,
         type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448791120723175248, guid: 089d38c2beff1f044b446797593d7269,
+        type: 3}
+      propertyPath: m_TagString
+      value: Hands
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 089d38c2beff1f044b446797593d7269, type: 3}
