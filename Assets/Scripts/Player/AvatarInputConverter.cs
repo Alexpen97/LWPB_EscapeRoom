@@ -22,11 +22,16 @@ public class AvatarInputConverter : MonoBehaviour
     public Vector3 headPositionOffset;
     public Vector3 handRotationOffset;
 
-    
 
+    private void Start()
+    {
+        AvatarHead.gameObject.layer = 10;
+        AvatarBody.gameObject.layer = 11;
+    }
     // Update is called once per frame
     void Update()
     {
+       
         //Head and Body synch
         MainAvatarTransform.position = Vector3.Lerp(MainAvatarTransform.position, XRHead.position + headPositionOffset, 0.5f);
         AvatarHead.rotation = Quaternion.Lerp(AvatarHead.rotation, XRHead.rotation, 0.5f);
