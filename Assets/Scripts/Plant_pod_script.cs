@@ -126,6 +126,7 @@ public class Plant_pod_script : MonoBehaviour
         else
         {
             Nutrients_balanced = false;
+            plant_placeholder.transform.GetChild(0).gameObject.GetComponent<MeshRenderer>().material = Dead_texture;
         }
 
         if (onfire)
