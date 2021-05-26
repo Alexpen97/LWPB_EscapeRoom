@@ -19,7 +19,7 @@ public class Lever_script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(gameObject.transform.rotation.x);
+      
         if (gameObject.transform.rotation.x <= TargetValue && !Triggered)
         {
             onTrigger.Invoke();

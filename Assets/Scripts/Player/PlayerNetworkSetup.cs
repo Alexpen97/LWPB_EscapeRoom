@@ -32,8 +32,8 @@ public class PlayerNetworkSetup : MonoBehaviourPunCallbacks
         }
         else
         {
-            localXRig.SetActive(true);
-            gameObject.GetComponent<AvatarInputConverter>().enabled = true;
+            localXRig.SetActive(false);
+            gameObject.GetComponent<AvatarInputConverter>().enabled = false;
             SetLayerRecursively(avatarHead, 0);
             SetLayerRecursively(avatarBody, 0);
         }

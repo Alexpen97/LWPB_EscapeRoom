@@ -24,14 +24,13 @@ public class Holo_animator : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.tag);
-        Debug.Log("trigger enter");
+
         if (!IsIdle)
         {
-            Debug.Log("is false");
+
             if (other.tag == "Player")
             {
-                Debug.Log("tag is player");
+
                 IsIdle = true;
                 Idle_animator.enabled = false;
                 SOS_animation.enabled = true;
