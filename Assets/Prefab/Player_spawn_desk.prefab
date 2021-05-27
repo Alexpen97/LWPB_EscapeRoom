@@ -187,8 +187,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.0000005, y: 1.1551828, z: 2.2442906}
-  m_Center: {x: 2.0000007, y: 0.5775913, z: 1.1221448}
+  m_Size: {x: 4.0000005, y: 1.0038307, z: 2.2442906}
+  m_Center: {x: 2.0000007, y: 0.5019152, z: 1.1221448}
 --- !u!1 &7744646318590021306
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,6 +522,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cup
+      objectReference: {fileID: 0}
+    - target: {fileID: 2838415279526665918, guid: 834c53c992011834998cfeafefaa1569,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 2838415279526665919, guid: 834c53c992011834998cfeafefaa1569,
         type: 3}
